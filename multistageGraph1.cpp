@@ -1,10 +1,8 @@
 #include <iostream>
-
 using namespace std;
 
 const int MAX_STAGES = 6;  // Maximum number of stages
 const int MAX_VERTICES = 10;  // Maximum number of vertices
-
 const int INF = 1e9;  // Infinity value
 
 // Function to find the minimum cost in a multistage graph

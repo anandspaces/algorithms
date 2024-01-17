@@ -1,5 +1,5 @@
 #include <iostream>
-#include <limits.h>
+#include <climits>
 using namespace std;
 
 // Number of vertices in the graph
@@ -23,7 +23,7 @@ void printSolution(int dist[])
 {
 	cout << "Vertex \t Distance from Source" << endl;
 	for (int i = 0; i < V; i++)
-		cout << i << " \t\t\t\t" << dist[i] << endl;
+		cout << i << " \t\t" << dist[i] << endl;
 }
 
 // Function that implements Dijkstra's single source shortest path algorithm for a graph represented using adjacency matrix representation

@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 const int INF = 1e9;
 const int MAX_VERTICES = 10;
@@ -43,7 +44,7 @@ public:
         for (int next = 0; next < numVertices; ++next) {
             if ((mask & (1 << next)) == 0 && graph[pos][next] != 0) {
                 int newMask = mask | (1 << next);
-                ans = std::min(ans, graph[pos][next] + tsp(newMask, next));
+                ans = min(ans, graph[pos][next] + tsp(newMask, next));
             }
         }
 
@@ -70,7 +71,7 @@ int main() {
     TSP tsp(graph, 4);
     int minCost = tsp.solveTSP();
 
-    std::cout << "Minimum Cost of TSP: " << minCost << std::endl;
+    cout << "Minimum Cost of TSP: " << minCost << endl;
 
     return 0;
 }

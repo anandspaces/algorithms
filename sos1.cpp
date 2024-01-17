@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 // Function to print subsets with the given sum

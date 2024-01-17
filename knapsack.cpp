@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 // Function to solve the 0/1 Knapsack problem

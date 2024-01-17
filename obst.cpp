@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 const int MY_INT_MAX = 2147483647;  // A large constant value

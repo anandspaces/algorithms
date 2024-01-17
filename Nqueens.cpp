@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 const int N = 8; // Size of the chessboard

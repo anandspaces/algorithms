@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 // Function to check if there is a subset with the given sum

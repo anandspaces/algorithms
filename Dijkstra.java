@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 public class Dijkstra {
-
     // Number of vertices in the graph
     static final int V = 9;
 
@@ -24,7 +23,7 @@ public class Dijkstra {
     static void printSolution(int dist[]) {
         System.out.println("Vertex \t Distance from Source");
         for (int i = 0; i < V; i++) {
-            System.out.println(i + " \t\t\t\t" + dist[i]);
+            System.out.println(i + " \t\t" + dist[i]);
         }
     }
 

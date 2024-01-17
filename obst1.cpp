@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 const int MAX_INT = 1e9;  // A large constant value to represent infinity

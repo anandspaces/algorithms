@@ -1,5 +1,4 @@
 public class HeapSort {
-
     // To heapify a subtree rooted with node i which is an index in arr[].
     // n is the size of the heap
     static void heapify(int arr[], int N, int i) {

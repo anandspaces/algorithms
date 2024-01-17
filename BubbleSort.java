@@ -1,5 +1,4 @@
 public class BubbleSort {
-
     // An optimized version of Bubble Sort
     static void bubbleSort(int arr[], int n) {
         boolean swapped;

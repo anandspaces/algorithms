@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 const int MAX_VERTICES = 100;  // Adjust the maximum number of vertices as needed
