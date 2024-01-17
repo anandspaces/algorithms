@@ -1,4 +1,5 @@
 # n queens
+# still issue
 def printSolution(a,n):
     for i in range(n):
         print("|")
@@ -38,10 +39,7 @@ def solve(a,col,n):
             a[row][col] = 0  # backtrack
     return count
 
-def main():
+if __name__ == "__main__":
     n = 8
     a = [[0] * n for _ in range(n)]
     print(f"Total number of solutions = {solve(a, 0, n)}")
-
-if __name__ == "__main__":
-    main()
