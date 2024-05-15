@@ -1,64 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithm</title>
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
             scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
         }
-        nav{
-            border: 1px solid black;
-            background-color: black;
-            text-align: center;
+
+        nav {
+            background-color: #333;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: top 0.3s; 
         }
+
         nav a {
             text-decoration: none;
             color: white;
+            padding: 14px 20px;
+            display: inline-block;
         }
-        nav a:hover{
-            color: gray;
-            text-decoration: none;
 
+        nav a:hover {
+            color: #ddd;
+            background-color: #444;
         }
+
         nav p {
             display: inline;
-            margin: 10px 10px 10px 10px;
+            margin: 0;
         }
-        /*
-        .n1{
-            color: rgb(0, 135, 135);
+
+        main {
+            padding-top: 70px;
+            max-width: 1200px;
+            margin: auto;
         }
-        .n2{
-            color: rgb(0, 45, 128);
-        }
-        .n3{
-            color: rgb(94, 0, 129);
-        }
-        .n4{
-            color: rgb(142, 0, 71);
-        }
-        .n5{
-            color:rgb(0, 2, 135)
-        }
-        .n6{
-            color:rgb(135, 0, 135)
-        }
-        */
+
         main h1 {
             text-align: center;
-            
+            margin: 30px 0;
+            color: #0056b3;
         }
-        main div{
-            outline: 1px groove black;
-            padding: 10px 10px 10px 10px;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            color: #444;
+        }
+
+        td a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        td a:hover {
+            text-decoration: underline;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+        }
+        .hide-nav {
+            top: -60px;
         }
     </style>
 </head>
+
 <body>
-    <nav>
+    <nav id="navbar">
         <p><a href="#s">Sorting</a></p>
         <p><a href="#g">Greedy Approach</a></p>
         <p><a href="#d">Dynamic Programming</a></p>
@@ -66,114 +100,201 @@
     </nav>
     <main>
         <h1 id="s">Sorting</h1>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/RfXt_qHDEPw?si=iMGcuVIWlCeOYPCX&amp;start=97" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-        </iframe>
-        <div class="n1">
-            <h2>Bubble Sort</h2>
-            <a href="bubbleSort.cpp">Bubble</a>
-        </div>
-        <div class="n2">
-            <h2>Selection Sort</h2>
-            <a href="selectionSort.cpp">Selection</a>
-        </div>
-        <div class="n3">
-            <h2>Insertion Sort</h2>
-            <a href="insertionSort.cpp">Insertion</a>
-        </div>
-        <div class="n4">
-            <h2>Quick Sort</h2>
-            <a href="quickSort.cpp">Quick</a>
-        </div>
-        <div class="n5">
-            <h2>Merge Sort</h2>
-            <a href="mergeSort.cpp">Merge</a>
-        </div>
-        <div class="n6">
-            <h2>Heap Sort</h2>
-            <a href="heapSort.cpp">Heap</a>
-        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RfXt_qHDEPw?si=iMGcuVIWlCeOYPCX&amp;start=97" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <table>
+            <thead>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Code Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bubble Sort</td>
+                    <td><a href="bubbleSort.cpp">Bubble</a></td>
+                </tr>
+                <tr>
+                    <td>Selection Sort</td>
+                    <td><a href="selectionSort.cpp">Selection</a></td>
+                </tr>
+                <tr>
+                    <td>Insertion Sort</td>
+                    <td><a href="insertionSort.cpp">Insertion</a></td>
+                </tr>
+                <tr>
+                    <td>Quick Sort</td>
+                    <td><a href="quickSort.cpp">Quick</a></td>
+                </tr>
+                <tr>
+                    <td>Merge Sort</td>
+                    <td><a href="mergeSort.cpp">Merge</a></td>
+                </tr>
+                <tr>
+                    <td>Heap Sort</td>
+                    <td><a href="heapSort.cpp">Heap</a></td>
+                </tr>
+            </tbody>
+        </table>
         <h1 id="g">Greedy Approach</h1>
-        <div class="n1">
-            <h2>Knapsack</h2>
-            <a href="fractionalKnapsack.cpp">Knapsack</a>
-            <a href="fractionalKnapsack1.cpp">Knapsack 2.0</a>
-            <a href="fractionalKnapsack2.cpp">Knapsack 3.0</a>
-        </div>
-        <div class="n2">
-            <h2>Minimum Spanning Tree</h2>
-            <h3>Kruskal's Algorithm</h3>
-            <a href="kruskal.cpp">Kruskal</a>
-            <a href="kruskal1.cpp">Kruskal 2.0</a>
-            <a href="kruskal2.cpp">Kruskal 3.0</a>
-            <h3>Prim's Algorithm</h3>
-            <a href="prim.cpp">Prim</a>
-            <a href="prim1.cpp">Prim 2.0</a>
-        </div>
-        <div class="n3">
-            <h2>Dijkstra's Algorithm</h2>
-            <a href="dijkstra.cpp">Dijkstra</a>
-            <a href="dijkstra1.cpp">Dijkstra 2.0</a>
-            <a href="dijkstra2.cpp">Dijkstra 3.0</a>
-        </div>
-        <div class="n4">
-            <h2>Job Sequencing with Deadline</h2>
-            <a href="jsd.cpp">JobSequencingWithDeadline</a>
-            <a href="jsd1.cpp">JobSequencingWithDeadline 2.0</a>
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Code Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Knapsack</td>
+                    <td>
+                        <a href="fractionalKnapsack.cpp">Knapsack</a>,
+                        <a href="fractionalKnapsack1.cpp">Knapsack 2.0</a>,
+                        <a href="fractionalKnapsack2.cpp">Knapsack 3.0</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kruskal's Algorithm</td>
+                    <td>
+                        <a href="kruskal.cpp">Kruskal</a>,
+                        <a href="kruskal1.cpp">Kruskal 2.0</a>,
+                        <a href="kruskal2.cpp">Kruskal 3.0</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prim's Algorithm</td>
+                    <td>
+                        <a href="prim.cpp">Prim</a>,
+                        <a href="prim1.cpp">Prim 2.0</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dijkstra's Algorithm</td>
+                    <td>
+                        <a href="dijkstra.cpp">Dijkstra</a>,
+                        <a href="dijkstra1.cpp">Dijkstra 2.0</a>,
+                        <a href="dijkstra2.cpp">Dijkstra 3.0</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Job Sequencing with Deadline</td>
+                    <td>
+                        <a href="jsd.cpp">Job Sequencing with Deadline</a>,
+                        <a href="jsd1.cpp">Job Sequencing with Deadline 2.0</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <h1 id="d">Dynamic Programming</h1>
-        <div class="n1">
-            <h2>0/1 Knapsack</h2>
-            <a href="knapsack.cpp">0/1 Knapsack</a>
-            <a href="knapsack1.cpp">0/1 Knapsack 2.0</a>
-            <a href="knapsack2.cpp">0/1 knapsack 3.0</a>
-        </div>
-        <div class="n2">
-            <h2>Longest Common Subsequence</h2>
-            <a href="lcs.cpp">LongestCommonSubsequence</a>
-            <a href="lcs1.cpp">LongestCommonSubsequence 2.0</a>
-            <a href="lcs2.cpp">LongestCommonSubsequence 3.0</a>
-        </div>
-        <div class="n3">
-            <h2>Travelling Salesman Problem</h2>
-            <a href="tsp.cpp">TravellingSalesmanProblem</a>
-            <a href="tsp1.cpp">TravellingSalesmanProblem 2.0</a>
-            <a href="tsp2.cpp">TravellingSalesmanProblem 3.0</a>
-            <a href="tsp3.cpp">TravellingSalesmanProblem 4.0</a>
-        </div>
-        <div class="n4">
-            <h2>All Pairs Shortest Path</h2>
-            <a href="apsp.cpp">AllPairsShortestPath</a>
-            <a href="apsp1.cpp">AllPairsShortestPath 2.0</a>
-            <a href="apsp2.cpp">AllPairsShortestPath 3.0</a>
-        </div>
-        <div class="n5">
-            <h2>Optimal Binary Search Tree</h2>
-            <a href="obst.cpp">OptimalBinarySearchTree</a>
-            <a href="obst1.cpp">OptimalBinarySearchTree 2.0</a>
-            <a href="obst2.cpp">OptimalBinarySearchTree 3.0</a>
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Code Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0/1 Knapsack</td>
+                    <td>
+                        <a href="knapsack.cpp">0/1 Knapsack</a>,
+                        <a href="knapsack1.cpp">0/1 Knapsack 2.0</a>,
+                        <a href="knapsack2.cpp">0/1 Knapsack 3.0</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Longest Common Subsequence</td>
+                    <td>
+                        <a href="lcs.cpp">Longest Common Subsequence</a>,
+                        <a href="lcs1.cpp">Longest Common Subsequence 2.0</a>,
+                        <a href="lcs2.cpp">Longest Common Subsequence 3.0</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Travelling Salesman Problem</td>
+                    <td>
+                        <a href="tsp.cpp">Travelling Salesman Problem</a>,
+                        <a href="tsp1.cpp">Travelling Salesman Problem 2.0</a>,
+                        <a href="tsp2.cpp">Travelling Salesman Problem 3.0</a>,
+                        <a href="tsp3.cpp">Travelling Salesman Problem 4.0</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>All Pairs Shortest Path</td>
+                    <td>
+                        <a href="apsp.cpp">All Pairs Shortest Path</a>,
+                        <a href="apsp1.cpp">All Pairs Shortest Path 2.0</a>,
+                        <a href="apsp2.cpp">All Pairs Shortest Path 3.0</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Optimal Binary Search Tree</td>
+                    <td>
+                        <a href="obst.cpp">Optimal Binary Search Tree</a>,
+                        <a href="obst1.cpp">Optimal Binary Search Tree 2.0</a>,
+                        <a href="obst2.cpp">Optimal Binary Search Tree 3.0</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <h1 id="b">Backtracking</h1>
-        <div class="n1">
-            <h2>N-Queens</h2>
-            <a href="Nqueens.cpp">Nqueens</a>
-            <a href="Nqueens1.cpp">Nqueens 2.0</a>
-            <a href="Nqueens2.cpp">Nqueens 3.0</a>
-        </div>
-        <div class="n2">
-            <h2>Graph Coloring</h2>
-            <a href="graphColoring.cpp">GraphColoring</a>
-            <a href="graphColoring1.cpp">GraphColoring 2.0</a>
-        </div>
-        <div class="n3">
-            <h2>Hamiltonian Cycle</h2>
-            <a href="hamiltonianCycle.cpp">HamiltonianCycle</a>
-            <a href="hamiltonianCycle1.cpp">hamiltonianCycle 2.0</a>
-        </div>
-        <div class="n4">
-            <h2>Sum Of Subset</h2>
-            <a href="lcs.cpp">SumOfSubset</a>
-            <a href="lcs1.cpp">SumOfSubset 2.0</a>
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Code Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>N-Queens</td>
+                    <td>
+                        <a href="Nqueens.cpp">N-Queens</a>,
+                        <a href="Nqueens1.cpp">N-Queens 2.0</a>,
+                        <a href="Nqueens2.cpp">N-Queens 3.0</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Graph Coloring</td>
+                    <td>
+                        <a href="graphColoring.cpp">Graph Coloring</a>,
+                        <a href="graphColoring1.cpp">Graph Coloring 2.0</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hamiltonian Cycle</td>
+                    <td>
+                        <a href="hamiltonianCycle.cpp">Hamiltonian Cycle</a>,
+                        <a href="hamiltonianCycle1.cpp">Hamiltonian Cycle 2.0</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sum Of Subset</td>
+                    <td>
+                        <a href="sos.cpp">Sum Of Subset</a>,
+                        <a href="sos1.cpp">Sum Of Subset 2.0</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </main>
+    <script>
+        var lastScrollTop = 0;
+        var navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scroll down
+                navbar.classList.add('hide-nav');
+            } else {
+                // Scroll up
+                navbar.classList.remove('hide-nav');
+            }
+
+            lastScrollTop = scrollTop;
+        });
+    </script>
 </body>
+
 </html>
